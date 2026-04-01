@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: narrative-ai-book-generator
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NARRATIVE_DATA_DIR
+        value: /var/data/narrative
+    disks:
+      - name: narrative-data
+        mountPath: /var/data
+        sizeGB: 1
