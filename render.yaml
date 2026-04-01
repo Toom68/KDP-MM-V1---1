@@ -9,7 +9,7 @@ services:
         value: 20
       - key: NARRATIVE_DATA_DIR
         value: /var/data/narrative
-    disks:
-      - name: narrative-data
-        mountPath: /var/data
-        sizeGB: 1
+    disk:
+      name: narrative-data
+      mountPath: /var/data
+      sizeGB: 1
